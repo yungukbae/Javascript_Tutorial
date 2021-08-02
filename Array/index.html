@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+
+        <script>
+            //basic Array
+            var shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+            console.log(shopping,shopping[0]);
+
+            //random array, sequence array
+            var sequence = [1,14,2,3,5,8,13];
+            var random = ['tree', 795, [0,1,2]];
+            console.log(sequence, random);
+            console.log(random[2][2]);
+
+            //array length
+            console.log(sequence.length) //7
+            for(var i = 0; i < sequence.length; i++){
+                console.log(sequence[i]);
+            }
+
+            //string to array, array to string
+            var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+            var myArray = myData.split(',');
+            console.log(myArray);
+            console.log(myArray.length);
+            console.log(myArray[0],myArray[1]); //Manchester, London
+            console.log(myArray[myArray.length-1]);// last data
+
+            var myNewString = myArray.join(',');
+            console.log(myNewString)
+
+            var dogNames = ['Rocket','Flash','Bella','Slugger'];
+            dogNames.toString(); //Rocket, Flash, Bella, Slugger
+
+            //add, del data
+            myArray.push('Cardiff'); //add Cardiff
+            console.log(myArray);
+            myArray.push('Bradford','Brighton'); //add Bradford, Brighton
+            console.log(myArray);
+
+            myArray.pop(); //delete last data
+            console.log(myArray);
+
+            myArray.unshift('Edinburgh');//add first array
+            console.log(myArray);
+
+            var removedItem = myArray.shift();//delete first array
+            console.log(myArray);
+            console.log(removedItem);
+
+        </script>
+
+</body>
+</html>

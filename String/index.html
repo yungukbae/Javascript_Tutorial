@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String</title>
+</head>
+<body>
+
+<button>Press me</button>
+
+<script>
+    //basic string
+    var string = 'The revolution will not be televised.';
+    console.log(string)
+
+    //string concatenate
+    var one = 'Hello, ';
+    var two = 'how are you?';
+    var joined = one + two;
+    console.log(joined);
+
+    var button = document.querySelector('button');
+
+    button.onclick = function () {
+        var name = prompt('what is your name');
+        alert('hello ' + name + ', nice to see you!');
+    }
+
+    //String vs Number
+    console.log('Front' + 242); //=> String
+
+    //String to Number
+    var myDate = '19' + '67';
+    console.log(typeof(myDate));
+    myDate = Number(myDate);
+    console.log(typeof(myDate));
+
+    //Number to String
+    var myNum = 123;
+    var myString = myNum.toString();
+    console.log(typeof(myString))
+
+    //String Length
+    var browserType = 'mozilla';
+    console.log(browserType.length); //7
+    console.log(browserType[0]) //m
+
+    //indexOf()
+    console.log(browserType.indexOf('zilla')); //2
+    console.log(browserType.indexOf('vanilla')); //-1
+
+    if(browserType.indexOf('mozilla') !== -1) {
+        // do stuff with the string
+    }
+
+    //slice()
+    console.log(browserType.slice(0,3)); //moz
+    console.log(browserType.slice(2)); //zilla
+
+    //toLowerCase() toUpperCase()
+    var radData = 'My NaMe Is MuD';
+    console.log(radData.toLowerCase()); //my name is mud
+    console.log(radData.toUpperCase()); //MY NAME IS MUD
+
+    //replace()
+    console.log(browserType.replace('moz','van')); //vanilla
+
+
+
+</script>
+</body>
+</html>

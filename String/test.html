@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div class="output">
+        <ul>
+
+        </ul>
+    </div>
+
+
+<script>
+    var list = document.querySelector('.output ul');
+    var greetings = ['Happy Birthday!','Merry Christmas my love',
+        'A happy Christmas to all the family',
+        'You\'re all I want for Christmas',
+        'Get well soon'];
+
+    for (var i = 0; i < greetings.length; i++){
+        var input = greetings[i];
+        // Your conditional test needs to go inside the parentheses
+        // in the line below, replacing what's currently there
+        console.log(input.indexOf('Christmas'))
+        if(input.indexOf('Christmas') === -1){
+            greetings[i] = false;
+        }
+        if (greetings[i]) {
+            var result = input;
+            var listItem = document.createElement('li');
+            listItem.textContent = result;
+            list.appendChild(listItem);
+        }
+    }
+
+</script>
+</body>
+</html>

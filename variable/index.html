@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable</title>
+</head>
+<body>
+    <button>Press Me</button>
+
+<script>
+
+    const button = document.querySelector('button');
+
+    button.onclick = function () {
+        let name = prompt('what is your name?');
+        alert('hello ' + name + ', nice to see you!');
+    }
+
+    var dog = {name:'Spot', bread: 'Dalmatian'};
+    console.log(dog.name)
+
+    var myNumber = '500';
+    console.log(typeof(myNumber)); // string
+    myNumber = 500;
+    console.log(typeof(myNumber)); // number
+
+
+
+
+</script>
+</body>
+</html>
